@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nyamil - Kebab & Burger Juara</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'nyamil-red': '#9C261F', // Merah Cabai
+              'nyamil-orange': '#F97316', // Oranye Jeruk
+              'nyamil-yellow': '#F8BC19', // Kuning Keju/Mustard
+            },
+            fontFamily: {
+              poppins: ['Poppins', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-orange-50 text-gray-800">
+    <nav class="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div class="shrink-0 flex items-center gap-2">
+            <img src="img/brand.png" alt="" />
+          </div>
+
+          <div class="hidden md:flex space-x-8 items-center">
+            <a href="#home" class="text-gray-700 hover:text-nyamil-red font-medium transition">Beranda</a>
+            <a href="#menu" class="text-gray-700 hover:text-nyamil-red font-medium transition">Menu</a>
+            <a href="#cabang" class="text-gray-700 hover:text-nyamil-red font-medium transition">Cabang</a>
+            <a href="https://wa.me/6285739092780" class="bg-nyamil-red hover:bg-red-700 text-white px-6 py-2 rounded-full font-bold transition shadow-lg transform hover:scale-105"> Pesan Sekarang </a>
+          </div>
+
+          <div class="md:hidden flex items-center">
+            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-gray-700 focus:outline-none">
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+        <a href="#home" class="block py-3 px-4 text-gray-700 hover:bg-orange-50">Beranda</a>
+        <a href="#menu" class="block py-3 px-4 text-gray-700 hover:bg-orange-50">Menu</a>
+        <a href="#cabang" class="block py-3 px-4 text-gray-700 hover:bg-orange-50">Cabang</a>
+        <a href="#contact" class="block py-3 px-4 text-nyamil-red font-bold">Pesan Sekarang</a>
+      </div>
+    </nav>
+
+    <section id="grab" class="py-4 bg-green-700">
+      <div class="max-w-7xl mx-auto px-4">
+        <p class="text-center text-sm text-green-50">NOW AVAILABLE ON</p>
+        <div class="flex justify-center">
+          <a href="https://www.grabfood.co.id/nyamil" class="text-center text-sm text-green-700">
+            <img class="w-32 mx-auto" src="img/grabfood.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-br from-nyamil-red via-red-700 to-nyamil-orange text-white overflow-hidden relative">
+      <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/food.png')]"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:py-10 lg:px-8 relative z-10 flex flex-col md:flex-row items-center">
+        <div class="w-full md:w-1/2 text-center md:text-left mb-12 md:mb-0">
+          <span class="bg-nyamil-yellow text-red-900 px-4 py-1 rounded-full text-sm font-semibold uppercase tracking-wider mb-4 inline-block shadow-md animate-bounce"> Rasanya Dijamin Nampol! 🔥 </span>
+          <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+            Lapar? <br />
+            <span class="text-nyamil-yellow text-stroke">Nyamil</span> Aja!
+          </h1>
+          <p class="text-lg text-red-100 mb-8 max-w-lg mx-auto md:mx-0">Nikmati sensasi Kebab premium yang otentik dan Burger daging tebal yang lumer di mulut. Dibuat dengan bahan segar setiap hari.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <a href="#menu" class="hidden md:block align-middle bg-nyamil-yellow text-red-900 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-yellow-300 transition transform hover:">
+              Lihat Menu <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <a href="https://wa.me/6285739092780" class="md:hidden bg-nyamil-yellow text-red-900 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-yellow-300 transition transform hover:">
+              Order Now <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <a href="#cabang" class="border-2 border-white text-white px-8 py-4 rounded-full text-lg hover:bg-white hover:text-nyamil-red transition"> Lokasi Cabang </a>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 flex justify-center relative">
+          <div class="absolute inset-0 bg-nyamil-yellow rounded-full blur-3xl opacity-30 transform scale-75"></div>
+          <img src="img/hero-banner.png" alt="Kebab dan Burger Nyamil" class="relative w-80 md:w-[500px] rounded-2xl rotate-3 hover:rotate-0 transition duration-500" />
+        </div>
+      </div>
+
+      <div class="absolute bottom-0 w-full leading-none">
+        <svg class="block w-full h-12 md:h-24" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path
+            fill="#FEF7ED"
+            fill-opacity="1"
+            d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
+    </section>
+
+    <section id="alasan" class="py-16 bg-orange-50">
+      <div class="max-w-7xl mx-auto px-4 mb-16">
+        <h2 class="text-nyamil-orange font-bold tracking-widest uppercase mb-2">ALASAN</h2>
+        <h3 class="text-4xl font-extrabold">Mengapa Harus <span class="text-orange-900">Nyamil</span>? 🤔</h3>
+      </div>
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div class="p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition border-b-4 border-nyamil-red">
+            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 text-nyamil-red text-2xl">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Bahan Premium</h3>
+            <p class="text-gray-600">Daging sapi premium dan selada hidroponik segar dan berkualitas.</p>
+          </div>
+          <div class="p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition border-b-4 border-nyamil-orange">
+            <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 text-nyamil-orange text-2xl">
+              <i class="fas fa-fire"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Disajikan Hangat</h3>
+            <p class="text-gray-600">Makanan dimasak dadakan saat kamu memesan. Dijamin masih ngebul!</p>
+          </div>
+          <div class="p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition border-b-4 border-nyamil-yellow">
+            <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4 text-yellow-600 text-2xl">
+              <i class="fas fa-truck-fast"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Delivery Order: Ready!</h3>
+            <p class="text-gray-600">Lapar gak bisa nunggu. Kurir kami siap meluncur ke lokasi kamu.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-nyamil-orange font-bold tracking-widest uppercase mb-2">Menu Spesial</h2>
+          <h3 class="text-4xl font-extrabold text-gray-900">Pilihan Jajanan <span class="text-nyamil-red">Nyamil</span>🥙</h3>
+        </div>
+
+        <!-- 
+        <div class="flex justify-center gap-4 mb-12">
+          <button class="px-6 py-2 bg-nyamil-red text-white rounded-full font-bold shadow-md">Semua</button>
+          <button class="px-6 py-2 bg-gray-100 text-gray-600 hover:bg-gray-200 rounded-full font-bold transition">Burger</button>
+          <button class="px-6 py-2 bg-gray-100 text-gray-600 hover:bg-gray-200 rounded-full font-bold transition">Kebab</button>
+        </div>
+         -->
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 border border-gray-100">
+            <div class="relative h-48 overflow-hidden">
+              <span class="absolute top-3 left-3 bg-nyamil-orange text-yellow-100 text-xs font-semibold px-2 py-1 rounded shadow z-10">💸 14K</span>
+              <img src="img/menu/beef-kebab.png" alt="Beef Kebab" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            </div>
+            <div class="p-6">
+              <h4 class="font-bold text-xl mb-2 text-gray-800">Beef Kebab</h4>
+              <p class="text-sm text-gray-500 mb-4">Daging sapi juicy, sayur segar, dan saus spesial dibungkus tortilla hangat.</p>
+            </div>
+          </div>
+
+          <div class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 border border-gray-100">
+            <div class="relative h-48 overflow-hidden">
+              <span class="absolute top-3 left-3 bg-nyamil-orange text-yellow-100 text-xs font-semibold px-2 py-1 rounded shadow z-10">💸 14K</span>
+              <img src="img/menu/chicken-kebab.png" alt="Chicken Kebab" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            </div>
+            <div class="p-6">
+              <h4 class="font-bold text-xl mb-2 text-gray-800">Chicken Kebab</h4>
+              <p class="text-sm text-gray-500 mb-4">Ayam berbumbu, lembut dan gurih, makin enak pakai saus khas.</p>
+            </div>
+          </div>
+
+          <div class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 border border-gray-100">
+            <div class="relative h-48 overflow-hidden">
+              <span class="absolute top-3 left-3 bg-nyamil-orange text-yellow-100 text-xs font-semibold px-2 py-1 rounded shadow z-10">💸 11K</span>
+              <img src="img/menu/beef-burger.png" alt="Beef Burger" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            </div>
+            <div class="p-6">
+              <h4 class="font-bold text-xl mb-2 text-gray-800">Beef Burger</h4>
+              <p class="text-sm text-gray-500 mb-4">Patty sapi juicy, keju, dan saus favorit di roti empuk.</p>
+            </div>
+          </div>
+
+          <div class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 border border-gray-100">
+            <div class="relative h-48 overflow-hidden">
+              <span class="absolute top-3 left-3 bg-nyamil-orange text-yellow-100 text-xs font-semibold px-2 py-1 rounded shadow z-10">💸 11K</span>
+              <img src="img/menu/chicken-burger.png" alt="Chicken Burger" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            </div>
+            <div class="p-6">
+              <h4 class="font-bold text-xl mb-2 text-gray-800">Chicken Burger</h4>
+              <p class="text-sm text-gray-500 mb-4">Ayam juicy, sayur segar, dan saus nikmat. Simple tapi mantap.</p>
+            </div>
+          </div>
+
+          <div class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 border border-gray-100">
+            <div class="relative h-48 overflow-hidden">
+              <span class="absolute top-3 left-3 bg-nyamil-orange text-yellow-100 text-xs font-semibold px-2 py-1 rounded shadow z-10">💸 13K</span>
+              <img src="img/menu/french-fries.png" alt="Kentang Goreng" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            </div>
+            <div class="p-6">
+              <h4 class="font-bold text-xl mb-2 text-gray-800">French Fries</h4>
+              <p class="text-sm text-gray-500 mb-4">Kentang renyah di luar, lembut di dalam cocok buat ngemil.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 
+        <div class="text-center mt-12">
+          <a href="#" class="inline-block border-b-2 border-nyamil-red text-nyamil-red font-bold hover:text-red-800 transition">Lihat Menu Lengkap</a>
+        </div>
+         -->
+      </div>
+    </section>
+
+    <section id="cabang" class="py-20 bg-red-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-nyamil-orange font-bold tracking-widest uppercase mb-2">Temukan Kami</h2>
+          <h3 class="text-4xl font-extrabold text-gray-900">🗺️ Lokasi Cabang <span class="text-nyamil-red">Nyamil</span></h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="group bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition duration-300 border-2 border-red-200">
+            <div class="relative h-48 overflow-hidden">
+              <img src="img/Blitar.png" alt="Blitar" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-6">
+              <h4 class="font-bold text-xl mb-2 text-gray-800">📍Cabang Blitar</h4>
+              <div class="grid grid-cols-2">
+                <p class="text-sm text-gray-500">Nyamil Sentul (Cab. Utama)</p>
+                <p class="text-sm text-gray-500">Alfamart Jl. IR Soekarno</p>
+                <p class="text-sm text-gray-500">Mustika Srengat</p>
+                <p class="text-sm text-gray-500">Indomaret Ahmad Yani</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="group bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition duration-300 border-2 border-red-200">
+            <div class="relative h-48 overflow-hidden">
+              <img src="img/Tulungagung.png" alt="Tulungagung" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-6">
+              <h4 class="font-bold text-xl mb-2 text-gray-800">📍Cabang Tulungagung</h4>
+              <div class="grid grid-cols-2">
+                <p class="text-sm text-gray-500">Nyamil Sentul (Cab. Utama)</p>
+                <p class="text-sm text-gray-500">Alfamart Jl. IR Soekarno</p>
+                <p class="text-sm text-gray-500">Mustika Srengat</p>
+                <p class="text-sm text-gray-500">Indomaret Ahmad Yani</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="group bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition duration-300 border-2 border-red-200">
+            <div class="relative h-48 overflow-hidden">
+              <img src="img/Kediri.png" alt="Kediri" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-6">
+              <h4 class="font-bold text-xl mb-2 text-gray-800">📍Cabang Kediri</h4>
+              <div class="grid grid-cols-2">
+                <p class="text-sm text-gray-500">Nyamil Sentul (Cab. Utama)</p>
+                <p class="text-sm text-gray-500">Alfamart Jl. IR Soekarno</p>
+                <p class="text-sm text-gray-500">Mustika Srengat</p>
+                <p class="text-sm text-gray-500">Indomaret Ahmad Yani</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="group bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition duration-300 border-2 border-red-200">
+            <div class="relative h-48 overflow-hidden">
+              <img src="img/Malang.png" alt="Malang" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-6">
+              <h4 class="font-bold text-xl mb-2 text-gray-800">📍Cabang Malang</h4>
+              <div class="grid grid-cols-2">
+                <p class="text-sm text-gray-500">Nyamil Sentul (Cab. Utama)</p>
+                <p class="text-sm text-gray-500">Alfamart Jl. IR Soekarno</p>
+                <p class="text-sm text-gray-500">Mustika Srengat</p>
+                <p class="text-sm text-gray-500">Indomaret Ahmad Yani</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="bg-red-900 text-white pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          <div>
+            <div class="mb-4">
+              <img src="img/brand.png" alt="Logo Nyamil" />
+            </div>
+            <p class="text-red-200 mb-6">Teman setia di saat perut keroncongan. Hadir dengan rasa bintang lima, harga kaki lima.</p>
+            <div class="flex space-x-4">
+              <a href="https://www.instagram.com/_nyamil" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-nyamil-yellow hover:text-red-900 transition"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/6285739092780" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-nyamil-yellow hover:text-red-900 transition"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-lg mb-4 text-nyamil-yellow">Tautan</h4>
+            <ul class="space-y-2 text-red-200">
+              <li><a href="#menu" class="hover:text-white transition">Menu Kami</a></li>
+              <li><a href="#cabang" class="hover:text-white transition">Lokasi Outlet</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-lg mb-4 text-nyamil-yellow">Hubungi Kami</h4>
+            <ul class="space-y-4 text-red-200">
+              <li class="flex items-start gap-3">
+                <i class="fas fa-map-marker-alt mt-1"></i>
+                <span>Jl. Ir. Soekarno No.39 66152 Blitar Jawa Timur (Cabang Utama)</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fas fa-phone-alt"></i>
+                <span>+62 857-3909-2780</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fas fa-envelope"></i>
+                <span>nyamilkebabdanburgernyamil@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-red-800 pt-8 text-center text-red-300 text-sm">
+          <p>&copy; 2025 Nyamil Boga Indonesia. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="fixed bottom-6 right-6 z-50 group">
+      <div
+        class="absolute right-16 top-1/2 transform -translate-y-1/2 bg-white text-gray-800 px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap border border-gray-100"
+      >
+        <p class="text-sm font-bold">Customer Service</p>
+      </div>
+
+      <a
+        href="https://wa.me/6285739092780?text=Halo%20Admin%20Nyamil,%20saya%20mau%20pesan%20dong!"
+        target="_blank"
+        class="flex items-center justify-center w-16 h-16 bg-[#25D366] text-white rounded-full shadow-2xl hover:bg-green-600 hover:scale-110 transition-all duration-300 relative"
+      >
+        <span class="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping"></span>
+
+        <i class="fab fa-whatsapp text-4xl relative z-10"></i>
+      </a>
+    </div>
+  </body>
+</html>
